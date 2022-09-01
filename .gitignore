@@ -154,4 +154,4 @@ node_modules
 psd
 thumb
 sketch
-.server/index.js
+.server/*.js
