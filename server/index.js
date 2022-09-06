@@ -20,4 +20,7 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
-mongoose.set('useFindAndModify', false);
+// This code is depreciated
+//mongoose.set('useFindAndModify', false);
+//https://mongoosejs.com/docs/migrating_to_6.html#mongoose-connect-returns-a-promise
+mongoose.connect(CONNECTION_URL).then(()=>{console.log('...')});
