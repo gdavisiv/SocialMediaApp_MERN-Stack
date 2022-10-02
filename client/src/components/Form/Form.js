@@ -12,9 +12,13 @@ const Form = () => {
 
   };
 
+  const clear = () => {
+
+  }
+
   return (
     <Paper className={classes.paper}>
-      <form autoComplete="off" noValidate className={classes.form} onSubmit={handleSumbit}>
+      <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSumbit}>
         <Typography variant="h6">Creating a Memory</Typography>
         {/*   
           //If we add a second text field we would over-ride our original,
@@ -32,7 +36,8 @@ const Form = () => {
             oneDone={({base64}) => setPostData({ ...postData, selectedFile: base64})}
           />
         </div>
-        <Button></Button>
+        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
+        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
       </form>
     </Paper>
   );

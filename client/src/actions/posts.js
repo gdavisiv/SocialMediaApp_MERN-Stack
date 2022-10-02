@@ -12,3 +12,11 @@ export const getPosts = () => async (dispatch) => {
         console.log(error.message);
     };
 };
+
+export const createPost = () => async (dispatch) => {
+    try {
+
+    } catch (error) {
+
+    };
+};
