@@ -32,6 +32,7 @@ const Form = () => {
             oneDone={({base64}) => setPostData({ ...postData, selectedFile: base64})}
           />
         </div>
+        <Button></Button>
       </form>
     </Paper>
   );
