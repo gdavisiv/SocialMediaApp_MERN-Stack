@@ -12,7 +12,7 @@ const Form = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   
-  const handleSumbit = () => {
+  const handleSumbit = (e) => {
     e.preventDefault();
 
     dispatch(createPost(postData));
